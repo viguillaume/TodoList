@@ -1,0 +1,19 @@
+{
+  "cwd": "C:\\Users\\vgvin\\Licence\\DevWeb\\Test",
+  "type": [
+    "pwa"
+  ],
+  "name": "Test",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": "less",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": true,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}
