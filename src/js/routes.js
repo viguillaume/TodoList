@@ -1,5 +1,5 @@
 
-import HomePage from '../pages/home.f7';
+import HomePage from '../pages/todolist.f7';
 import AboutPage from '../pages/about.f7';
 import FormPage from '../pages/form.f7';
 
