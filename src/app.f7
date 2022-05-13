@@ -60,9 +60,12 @@
             </div>
           </div>
           <div class="page-content">
-            <div class="block">
-              <p>Popup content goes here.</p>
-            </div>
+            <div class="item-title item-label">Nom de la liste</div>
+                  <div class="item-input-wrap">
+                    <textarea placeholder="Saisir le nom" class="resizable"></textarea>
+                  </div>
+
+        <a href="#" class="col button button-round button-fill">Ajouter</a>
           </div>
         </div>
       </div>
@@ -82,9 +85,17 @@
             </div>
           </div>
           <div class="page-content">
-            <div class="block">
-              <p>Popup content goes here.</p>
-            </div>
+            <div class="item-title item-label">Nom de la tâche</div>
+                  <div class="item-input-wrap">
+                    <textarea placeholder="Saisir le nom" class="resizable"></textarea>
+                  </div>
+
+                  <div class="item-title item-label">Couleur de la tâche</div>
+                  <div class="item-input-wrap">
+                    <textarea placeholder="Saisir la couleur" class="resizable"></textarea>
+                  </div>
+
+        <a href="#" class="col button button-round button-fill">Ajouter</a>
           </div>
         </div>
       </div>
