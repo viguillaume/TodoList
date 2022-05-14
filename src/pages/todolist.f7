@@ -99,9 +99,5 @@ export default () => {
 
   return $render;
 }
-import Framework7 from 'framework7';
 
-Framework7.request.get('http://localhost:80/licence/API/GetListes.php').then((res) => {
-  console.log(res.data);
-});
 </script>
