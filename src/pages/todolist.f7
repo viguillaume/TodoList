@@ -100,4 +100,16 @@ export default () => {
   return $render;
 }
 
+import Framework7 from 'framework7';
+
+Framework7.request.post('http://localhost:80/licence/API/GetTypes.php').then((res) => {
+  console.log(res.data);
+});
+Framework7.request.post('http://localhost:80/licence/API/GetListes.php').then((res) => {
+  console.log(res.data);
+});
+Framework7.request.post('http://localhost:80/licence/API/GetTaches.php').then((res) => {
+  console.log(res.data);
+});
+
 </script>
