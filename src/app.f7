@@ -13,8 +13,8 @@
             </div>
           </div>
           <div class="page-content">
-            <div class="block">Contenu</div>
-            <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popupliste">Ajouter une liste</a>
+            <div class="block" id="cibleliste">Contenu - Les listes</div>
+            <a href="#" class="button button-large button-fill color-green popup-open" data-popup="#my-popupliste">Ajouter une liste</a>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
                     <textarea placeholder="Saisir le nom" class="resizable"></textarea>
                   </div>
 
-        <a href="#" class="col button button-round button-fill">Ajouter</a>
+        <a href="#" class="col button button-round button-fill" id="boutonajoutliste">Ajouter</a>
           </div>
         </div>
       </div>
@@ -167,4 +167,22 @@
 
     return $render;
   }
+
+import Framework7 from 'framework7';
+import Dom7 from 'Dom7';
+
+var $$ = Dom7;
+var $data;
+
+Framework7.request.post('http://localhost:80/licence/API/GetListes.php').then((res) => {
+  console.log(res.data);
+  $data = JSON.parse(res.data);
+  console.log($data);
+  $data.forEach((element, i) => {
+    $$('#cibleliste').append("<br><a href='#' class='col button button-small button-round button-fill color-deeppurple'>"+$data[i].libelle_liste+"</a>");
+  });
+  console.log('Chargement effectué');
+});
+
+$$('#botonajoutliste').on('click', alert("oui"));
 </script>
