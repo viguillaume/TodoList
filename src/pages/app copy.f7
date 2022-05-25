@@ -9,12 +9,27 @@
           <div class="navbar">
             <div class="navbar-bg"></div>
             <div class="navbar-inner">
-              <div class="title">Mes listes</div>
+              <div class="title">Left Panel</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block" id="cibleliste">Contenu - Les listes</div>
-            <a href="#" class="button button-large button-fill color-green popup-open" data-popup="#my-popupliste">Ajouter une liste</a>
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Right panel content goes here</div>
           </div>
         </div>
       </div>
@@ -41,61 +56,6 @@
             <div class="block">
               <p>Popup content goes here.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Popup liste-->
-    <div class="popup" id="my-popupliste">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner">
-              <div class="title">Ajout d'une liste</div>
-              <div class="right">
-                <a href="#" class="link popup-close">Annuler</a>
-              </div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="item-title item-label">Nom de la liste</div>
-                  <div class="item-input-wrap">
-                    <textarea placeholder="Saisir le nom" class="resizable"></textarea>
-                  </div>
-
-        <a href="#" class="col button button-round button-fill" id="boutonajoutliste">Ajouter</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Popup tache-->
-    <div class="popup" id="my-popuptache">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner">
-              <div class="title">Ajout d'une tâche</div>
-              <div class="right">
-                <a href="#" class="link popup-close">Annuler</a>
-              </div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="item-title item-label">Nom de la tâche</div>
-                  <div class="item-input-wrap">
-                    <textarea placeholder="Saisir le nom" class="resizable"></textarea>
-                  </div>
-
-                  <div class="item-title item-label">Couleur de la tâche</div>
-                  <div class="item-input-wrap">
-                    <textarea placeholder="Saisir la couleur" class="resizable"></textarea>
-                  </div>
-
-        <a href="#" class="col button button-round button-fill">Ajouter</a>
           </div>
         </div>
       </div>
@@ -146,25 +106,7 @@
   </div>
 </template>
 <script>
-  import Framework7 from 'framework7';
-import Dom7 from 'Dom7';
-
-  export default (props, { $f7, $update,$ }) => {
-    var $$ = Dom7;
-var $data;
-
-Framework7.request.post('http://localhost:80/licence/API/GetListes.php').then((res) => {
-  console.log(res.data);
-  $data = JSON.parse(res.data);
-  console.log($data);
-  $data.forEach((element, i) => {
-    $$('#cibleliste').append("<br><a href='#' class='col button button-small button-round button-fill color-deeppurple'>"+$data[i].libelle_liste+"</a>");
-  });
-  console.log('Chargement effectué');
-});
-
-
-
+  export default (props, { $f7, $update }) => {
     // Login screen demo data
     let username = '';
     let password = '';
@@ -185,9 +127,4 @@ Framework7.request.post('http://localhost:80/licence/API/GetListes.php').then((r
 
     return $render;
   }
-
-// import Framework7 from 'framework7';
-// import Dom7 from 'Dom7';
-
-
 </script>

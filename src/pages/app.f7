@@ -149,7 +149,7 @@
   import Framework7 from 'framework7';
 import Dom7 from 'Dom7';
 
-  export default (props, { $f7, $update,$ }) => {
+  export default (props, { $f7, $update }) => {
     var $$ = Dom7;
 var $data;
 
@@ -163,7 +163,7 @@ Framework7.request.post('http://localhost:80/licence/API/GetListes.php').then((r
   console.log('Chargement effectué');
 });
 
-
+$$('#boutonajoutliste').on('click', alert("oui"));
 
     // Login screen demo data
     let username = '';
