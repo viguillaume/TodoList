@@ -20,8 +20,8 @@
     <div class="page-content">
       <div class="block-title">Nom de la liste (??)</div>
     <div class="list">
-      <ul>
-        <li>
+      <ul id="cibletache">
+        <!-- <li>
           <label class="item-checkbox item-content">
             <input id="livre" type="checkbox" name="checkbox" value="Jeux vidéos" checked="checked"/>
             <i class="icon icon-checkbox"></i>
@@ -56,7 +56,7 @@
               <div class="item-title">Coca</div>
             </div>
           </label>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -78,6 +78,11 @@ export default (/*$$*/) => {
 }
 
 import Framework7 from 'framework7';
+import Dom7 from 'Dom7';
+
+var $$ = Dom7;
+var $data;
+var etat;
 
 Framework7.request.post('http://localhost:80/licence/API/GetTypes.php').then((res) => {
   console.log(res.data);
@@ -87,6 +92,19 @@ Framework7.request.post('http://localhost:80/licence/API/GetTypes.php').then((re
 // });
 Framework7.request.post('http://localhost:80/licence/API/GetTaches.php').then((res) => {
   console.log(res.data);
+  $data = JSON.parse(res.data);
+  console.log($data);
+  $data.forEach((element, i) => {
+    if ($data[i].etat_tache == 1){
+      etat = "checked";
+    }
+    else{
+      etat = "";
+    }
+    $$('#cibletache').append
+    ("<li><label class='item-checkbox item-content'><input id="+$data[i].id_tache+" type='checkbox' name='checkbox' value="+$data[i].libelle_tache+" "+etat+"/><i class='icon icon-checkbox'></i><div class='item-inner'><div class='item-title'>"+$data[i].libelle_tache+"</div></div></label></li>");
+  });
+  console.log('Chargement effectué');
 });
 
 //$( ".livre" ).prop( "disabled", false );
