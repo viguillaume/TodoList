@@ -1,6 +1,5 @@
 
 import HomePage from '../pages/todolist.f7';
-import AboutPage from '../pages/about.f7';
 import FormPage from '../pages/form.f7';
 
 
@@ -12,10 +11,6 @@ var routes = [
   {
     path: '/',
     component: HomePage,
-  },
-  {
-    path: '/about/',
-    component: AboutPage,
   },
   {
     path: '/form/',
