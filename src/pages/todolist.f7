@@ -23,37 +23,37 @@
       <ul>
         <li>
           <label class="item-checkbox item-content">
-            <input id="livre" type="checkbox" name="checkbox" value="Books" checked="checked"/>
+            <input id="livre" type="checkbox" name="checkbox" value="Jeux vidéos" checked="checked"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Books</div>
+              <div class="item-title">Jeux vidéos</div>
             </div>
           </label>
         </li>
         <li>
           <label class="item-checkbox item-content">
-            <input type="checkbox" name="checkbox" value="Movies" checked="checked" onclick="console.log('oui')"/>
+            <input type="checkbox" name="checkbox" value="Pizza" checked="checked" onclick="console.log('oui')"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Movies</div>
+              <div class="item-title">Pizza</div>
             </div>
           </label>
         </li>
         <li>
           <label class="item-checkbox item-content">
-            <input type="checkbox" name="checkbox" value="Food"/>
+            <input type="checkbox" name="checkbox" value="Glaces"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Food</div>
+              <div class="item-title">Glaces</div>
             </div>
           </label>
         </li>
         <li>
           <label class="item-checkbox item-content">
-            <input type="checkbox" name="checkbox" value="Drinks"/>
+            <input type="checkbox" name="checkbox" value="Coca"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Drinks</div>
+              <div class="item-title">Coca</div>
             </div>
           </label>
         </li>
@@ -71,8 +71,8 @@
   </div>
 </template>
 <script>
-export default ($$) => {
-  $$('#boutonajoutliste').on('click', alert("oui"));
+export default (/*$$*/) => {
+  // $$('#boutonajoutliste').on('click', alert("oui"));
 
   return $render;
 }
