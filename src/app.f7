@@ -94,16 +94,30 @@
             </div>
           </div>
           <div class="page-content">
-            <div class="item-title item-label">Nom de la tâche</div>
-                  <div class="item-input-wrap">
-                    <textarea placeholder="Saisir le nom" class="resizable"></textarea>
+            <form class="list" id="form-tache">
+              <ul>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Nom</div>
+                      <div class="item-input-wrap">
+                        <input type="text" placeholder="Nom de la tâche" />
+                      </div>
+                    </div>
                   </div>
-
-                  <div class="item-title item-label">Couleur de la tâche</div>
-                  <div class="item-input-wrap">
-                    <textarea placeholder="Saisir la couleur" class="resizable"></textarea>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Couleur</div>
+                      <div class="item-input-wrap">
+                        <input type="color" value="#e66465"/>
+                      </div>
+                    </div>
                   </div>
-
+                </li>
+              </ul>
+            </form>
         <a href="#" class="col button button-round button-fill">Ajouter</a>
           </div>
         </div>
